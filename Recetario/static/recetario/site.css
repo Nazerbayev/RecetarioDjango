@@ -1,0 +1,15 @@
+body {
+  background-image: url("images/bg/skulls.png"); }
+
+.toolbar {
+  background-color: #0E566C; }
+
+.ui.menu .item img.logo {
+  margin-right: 1.5em; }
+
+.main.container {
+  padding-top: 7em;
+  background-color: #FFF;
+  height: 100vh; }
+
+/*# sourceMappingURL=site.css.map */

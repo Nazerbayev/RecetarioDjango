@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'recetario/semantic.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'recetario/site.css' %}"/>
+    <title>{% block title %}Recetario Familiar{% endblock %}</title>
+</head>
+<body>
+<div class="ui fixed red inverted menu">
+    <div class="ui container">
+        <a href="#" class="header item">
+            <img class="logo" src="{% static 'recetario/images/asian_chicken_salad.png' %}">
+            Project Name
+        </a>
+        {% block nav %}
+        <a href="#" class="{% block nav-home %}{% endblock %} item">Home</a>
+        <a href="#" class="{% block nav-recetas %}{% endblock %} item">Recetas</a>
+        <a href="#" class="{% block nav-etc %}{% endblock %} item">Etc</a>
+        {% endblock %}
+        <div class="ui simple right dropdown item">
+            William Bettencourt <i class="dropdown icon"></i>
+
+            <div class="menu">
+                <a class="item" href="#">Link Item</a>
+                <a class="item" href="#">Link Item</a>
+
+                <div class="divider"></div>
+                <div class="header">Header Item</div>
+                <div class="item">
+                    <i class="dropdown icon"></i>
+                    Sub Menu
+                    <div class="menu">
+                        <a class="item" href="#">Link Item</a>
+                        <a class="item" href="#">Link Item</a>
+                    </div>
+                </div>
+                <a class="item" href="#">Link Item</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui main container">
+    <h1 class="ui header">Semantic UI Fixed Template</h1>
+    <div class="ui stackable two column padded grid">
+        <div class="three wide column">
+            {% block sidebar %}
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            {% endblock %}
+        </div>
+        <div class="thirteen wide column">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="{% static 'recetario/semantic.js' %}"></script>
+</body>
+</html>
